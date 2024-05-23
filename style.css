@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+:root {
+  --or: #b76e2d;
+  --fc: #ffffff;
+}
+
+/* todo lo centra */
+
+.c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ! background */
+
+body {
+  width: 100%;
+  height: auto;
+  background-image: radial-gradient(
+    ellipse 65% 100% at 50% 40%,
+    #b76e2d,
+    #1f140e
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: cover;
+  color: var(--fc);
+}
+
+.carr {
+  height: 90vh;
+}
+
+/* ? navbar */
+
+.nb {
+  margin: 1% 0 0 0;
+}
+
+.nbl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
+}
+
+.nbl a {
+  color: var(--fc);
+}
+
+a {
+  text-decoration: none;
+}
+
+.lg {
+  width: 80px;
+  height: 80px;
+  margin: 0;
+}
+
+.ic {
+  width: 50px;
+  height: 50px;
+}
+
+.l {
+  margin: 0 7% 0 0;
+}
+
+.r {
+  margin: 0 0 0 7%;
+}
+
+.nal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 32px;
+  letter-spacing: -2px;
+}
+
+.nait {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.a {
+  transition: 110ms ease-out;
+}
+
+/* *pagina principal */
+/* carrusel */
+.mid {
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 55%;
+  opacity: 20%;
+}
+
+.crs {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+}
+
+.sli {
+  overflow: hidden;
+}
+
+.sli input {
+  visibility: hidden;
+  display: none;
+}
+
+.btn {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: 50px;
+  gap: 10px;
+}
+
+.btn label {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: white;
+  opacity: 0.2;
+  z-index: 1;
+  transition: 220ms ease-in-out;
+}
+
+.btn label:hover {
+  scale: 1.1;
+  opacity: 1;
+}
+
+.cnt {
+  position: relative;
+  width: 500vw;
+  display: flex;
+  transition: 300ms ease-in-out;
+}
+
+.Es {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms ease-in-out;
+}
+
+.cb {
+  width: 35%;
+  position: absolute;
+  top: 0;
+  align-self: center;
+  mix-blend-mode: luminosity;
+  transition: 200ms ease-out;
+}
+
+/* cubos mas vendidos*/
+
+section {
+  --col-orange: #d17842;
+  --col-dark: #0c0f14;
+  --col-darkGray: #52555a;
+  --col-gray: #aeaeae;
+
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--col-dark);
+  border-radius: 30px;
+}
+.label {
+  padding: 8px 18px;
+  transition: all 200ms;
+  display: inline-block;
+}
+
+.label input[type="radio"] {
+  display: none;
+}
+.label > svg {
+  transition: all 200ms;
+  fill: var(--col-gray);
+  width: 14px;
+}
+.label:hover:not(:has(input:checked)) > svg {
+  fill: #d17842;
+  opacity: 0.6;
+}
+.label::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  border-radius: 5px;
+  position: relative;
+  left: 50%;
+  top: 20px;
+  background: var(--col-orange);
+  transition: all 200ms;
+}
+.label > svg {
+  transition: 300ms;
+  fill: var(--col-darkGray);
+  margin-top: 0;
+}
+.label:has(input:checked) > svg {
+  fill: var(--col-orange);
+  scale: 1.2;
+  margin-top: -5px;
+}
+
+.label:has(input:checked)::before {
+  width: 100%;
+  left: 0;
+  top: 25px;
+}
+
+.pr-pop {
+  width: 95%;
+  height: 400vh;
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.76);
+  padding: 2.5%;
+}
+
+.ig {
+  background-color: aqua;
+  width: 100%;
+  min-height: 300px
+    /*400px pa celuco pero hazlo si la pantalla es menor a x valor*/;
+}
+
+.sh-car {
+  background-color: white;
+  width: 50px;
+  height: 45px;
+  border-radius: 5px;
+  position: relative;
+  top: -34%;
+  left: 91%;
+}
+
+.ct-crd {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+  margin: 0 auto;
+}
+
+.crd {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.crd a {
+  color: white;
+}
+
+.inf {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+  margin: auto 0;
+}
+
+.inf h4 {
+  margin: 0 0 8px 0;
+}
+
+/* * switch provisional */
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 1rem;
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #eee;
+  transition: 0.4s;
+  border-radius: 0.5em;
+  box-shadow: 0 0.2em #dfd9d9;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.4em;
+  border-radius: 0.3em;
+  left: 0.3em;
+  bottom: 0.7em;
+  background-color: lightsalmon;
+  transition: 0.17s;
+  box-shadow: 0 0.4em #bcb4b4;
+}
+
+.slider:hover::before {
+  box-shadow: 0 0.2em #bcb4b4;
+  bottom: 0.5em;
+}
+
+input:checked + .slider:before {
+  transform: translateX(2em);
+  background: lightgreen;
+}
+
+/* ? footer*/
+
+footer {
+  background: #343434;
+  padding-top: 50px;
+}
+
+.container {
+  width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 33.3%;
+}
+
+.footer-content h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.footer-content p {
+  width: 190px;
+  margin: auto;
+  padding: 7px;
+}
+
+.footer-content ul {
+  text-align: center;
+}
+
+.list {
+  padding: 0;
+}
+
+.list a {
+  color: white;
+}
+
+.list li {
+  width: auto;
+  text-align: center;
+  list-style-type: none;
+  padding: 7px;
+  position: relative;
+}
+
+.list li::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 2px;
+  background: var(--or);
+  transition-duration: 0.5s;
+}
+
+.list li:hover::before {
+  width: 70px;
+}
+
+.social-icons {
+  text-align: center;
+  padding: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+}
+
+.social-icons i {
+  color: white;
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list a:hover {
+  color: var(--or);
+}
+
+.social-icons i:hover {
+  color: var(--or);
+}
+
+.bottom-bar {
+  background: var(--or);
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}
+
+.bottom-bar p {
+  color: black;
+  margin: 0;
+  font-size: 16px;
+  padding: 7px;
+}
+
+/* TODO Animaciones */
+
+/* navbar*/
+.a:hover {
+  transform: scale(1.2);
+}
+
+/* * Pagina Principal*/
+.sli input:nth-child(1):checked ~ .btn label:nth-child(1),
+.sli input:nth-child(2):checked ~ .btn label:nth-child(2),
+.sli input:nth-child(3):checked ~ .btn label:nth-child(3),
+.sli input:nth-child(4):checked ~ .btn label:nth-child(4),
+.sli input:nth-child(5):checked ~ .btn label:nth-child(5) {
+  opacity: 0.5;
+  scroll-margin: 1.2;
+  width: 40px;
+}
+
+.sli input:nth-child(1):checked ~ .cnt {
+  left: 0;
+}
+
+.sli input:nth-child(2):checked ~ .cnt {
+  left: -100vw;
+}
+
+.sli input:nth-child(3):checked ~ .cnt {
+  left: -200vw;
+}
+
+.sli input:nth-child(4):checked ~ .cnt {
+  left: -300vw;
+}
+
+.sli input:nth-child(5):checked ~ .cnt {
+  left: -400vw;
+}
+
+.cb:hover {
+  mix-blend-mode: normal;
+  transform: scale(1.01);
+}
